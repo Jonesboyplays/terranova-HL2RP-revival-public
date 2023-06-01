@@ -102,33 +102,36 @@ function PANEL:UpdateModel()
 end
 
 -- Called when we are assigning all the character panel data to this panel.
-function PANEL:SetCharPanel(charPanel)
-	self.panelID = charPanel:GetID()
+function PANEL:SetCharPanel(charPanel) 
+    print(charPanel) -- Prints the panel
+    if charPanel then
+		self.panelID = charPanel:GetID()
 
-	self:BuildSlots();
-
-	for k, items in pairs(charPanel.slots) do
-		if (!items.id) then continue end
-
-		local item = ix.item.instances[items.id]
-
-		if (item and !IsValid(self.panels[item.id])) then
-			local icon = self:AddIcon(
-				item, item:GetModel() or "models/props_junk/popcan01a.mdl", item.outfitCategory, item:GetSkin()
-			)
-
-			if (IsValid(icon)) then
-				icon:SetHelixTooltip(function(tooltip)
-					ix.hud.PopulateItemTooltip(tooltip, item)
-				end)
-
-				icon.itemID = item.id
-				self.panels[item.id] = icon
+		self:BuildSlots();
+	
+		for k, items in pairs(charPanel.slots) do
+			if (!items.id) then continue end
+	
+			local item = ix.item.instances[items.id]
+	
+			if (item and !IsValid(self.panels[item.id])) then
+				local icon = self:AddIcon(
+					item, item:GetModel() or "models/props_junk/popcan01a.mdl", item.outfitCategory, item:GetSkin()
+				)
+	
+				if (IsValid(icon)) then
+					icon:SetHelixTooltip(function(tooltip)
+						ix.hud.PopulateItemTooltip(tooltip, item)
+					end)
+	
+					icon.itemID = item.id
+					self.panels[item.id] = icon
+				end
+	
+				self.slots[item.outfitCategory].isEmpty = false
 			end
-
-			self.slots[item.outfitCategory].isEmpty = false
 		end
-	end
+    end
 end
 
 -- Returns a slot's placement inside the panel.
