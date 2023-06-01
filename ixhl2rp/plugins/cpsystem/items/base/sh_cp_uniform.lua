@@ -23,10 +23,12 @@ ITEM.iconCam = {
 ITEM.maxArmor = 100;
 ITEM.noBusiness = true
 ITEM.suppressed = function(itemTable)
+	print(charPanel)
 	local charPanel = itemTable.player:GetCharacter():GetCharPanel()
-
-	if(charPanel:HasEquipped()) then
-		return true, "Equip", "You can't equip a uniform with items in your character panel!"
+	if charPanel then
+		if(charPanel:HasEquipped()) then
+			return true, "Equip", "You can't equip a uniform with items in your character panel!"
+		end
 	end
 
 	return false
