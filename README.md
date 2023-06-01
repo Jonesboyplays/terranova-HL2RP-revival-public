@@ -18,9 +18,7 @@
 
 
 ## Why is this open-source?
-I don't really care for Garry's Mod anymore. There was alot of personal hard work that I put into this server and a lot of custom features that I think would benefit the rest of the community with the limited life left in the game. I can't guarantee code quality, interopability with other plugins or maintenence of any of the features present within the gamemode. Most of it is as-is, and I won't be providing support for it.
-
-There was a few framework edits required to achieve optional functionality. The HL2 RP gamemode should work with any latest version of HELIX, since any major changes such as the character panel, traits, liquids and character creation were baked directly with the schema.
+I am new to coding and defying consenticus qui tacitus, I am keeping this open.
 
 ## Features
 
