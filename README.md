@@ -1,5 +1,5 @@
-## Why is this open-source?
-I am new to coding and defying consenticus qui tacitus from the owner, I am keeping this open.
+## ALL CREDIT GOES TO: Terranova3.
+- all I'm doing is fixing some errors.
 
 ## Features
 
