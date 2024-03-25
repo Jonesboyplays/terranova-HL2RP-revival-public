@@ -1,5 +1,6 @@
 ## ALL CREDIT GOES TO: Terranova3.
-- all I'm doing is fixing some errors.
+- All I'm doing is fixing some errors.
+- This repo is a proof-of-concept:
 - For the most recent and unbuggy version, go here: https://github.com/Jonesboyplays/Terranova3-hl2rp-revivalproject
 
 ## Features
